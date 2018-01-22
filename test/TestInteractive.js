@@ -55,6 +55,15 @@ contract('TestInteractive', function(accounts) {
     assert.deepEqual(numbers[2], bN(0));
   });
 
+  it("[interactive function makes 3 calls, runs out of gas at the third call] revert all data", async function() {
+    const testNumbers = [ bN(1234), bN(3456), bN(6789) ];
+    assert.ok(await a.failure(testInteractive.change_three_numbers(...testNumbers, false, false, false, false, false, false, { gas: 80000 })));
+    const numbers = await testStorage.read_numbers.call();
+    assert.deepEqual(numbers[0], bN(0));
+    assert.deepEqual(numbers[1], bN(0));
+    assert.deepEqual(numbers[2], bN(0));
+  });
+
   it("[interactive function makes 2 calls to change two storage contracts] set data correctly", async function() {
     const number1Contract1 = bN(9876);
     const number1Contract2 = bN(987654);
@@ -74,4 +83,6 @@ contract('TestInteractive', function(accounts) {
     assert.deepEqual(numbersInContract1[0], bN(0));
     assert.deepEqual(numbersInContract2[0], bN(0));
   });
+
+
 });

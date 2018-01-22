@@ -2,6 +2,7 @@ pragma solidity ^0.4.16;
 
 contract TestStorage {
   uint256[] numbers;
+  event TestEvent(uint256 _number);
 
   function TestStorage() {
     numbers.push(0);
@@ -15,6 +16,7 @@ contract TestStorage {
   {
     numbers[_position] = _number;
     require(!_to_throw);
+    TestEvent(_number);
     _success = !_to_return_false;
   }
 
