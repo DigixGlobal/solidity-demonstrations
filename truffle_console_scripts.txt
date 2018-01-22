@@ -1,0 +1,7 @@
+# truffle console scripts
+i = TestInteractive.at(TestInteractive.address)
+s = TestStorage.at(TestStorage.address)
+
+s.read_numbers.call()
+i.change_three_numbers(1,2,3,false, false, true, false, false, false)
+s.read_numbers.call()

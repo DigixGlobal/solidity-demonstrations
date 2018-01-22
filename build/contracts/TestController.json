@@ -1,0 +1,83 @@
+{
+  "contract_name": "TestController",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_position",
+          "type": "uint256"
+        },
+        {
+          "name": "_number",
+          "type": "uint256"
+        },
+        {
+          "name": "_to_throw",
+          "type": "bool"
+        },
+        {
+          "name": "_to_return_false",
+          "type": "bool"
+        }
+      ],
+      "name": "change_storage_two",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_position",
+          "type": "uint256"
+        },
+        {
+          "name": "_number",
+          "type": "uint256"
+        },
+        {
+          "name": "_to_throw",
+          "type": "bool"
+        },
+        {
+          "name": "_to_return_false",
+          "type": "bool"
+        }
+      ],
+      "name": "change_storage",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_testStorage",
+          "type": "address"
+        },
+        {
+          "name": "_testStorageTwo",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b60405160408061024c83398101604052808051919060200180519150505b60008054600160a060020a03808516600160a060020a03199283161790925560018054928416929091169190911790555b50505b6101dc806100706000396000f300606060405263ffffffff60e060020a60003504166328a0072c811461002f5780632b50883514610054575b600080fd5b341561003a57600080fd5b61005260043560243560443515156064351515610079565b005b341561005f57600080fd5b61005260043560243560443515156064351515610112565b005b60015473ffffffffffffffffffffffffffffffffffffffff1663c6542ac78585858560006040516020015260405160e060020a63ffffffff8716028152600481019490945260248401929092521515604483015215156064820152608401602060405180830381600087803b15156100f057600080fd5b6102c65a03f1151561010157600080fd5b505050604051805150505b50505050565b6000805473ffffffffffffffffffffffffffffffffffffffff169063c6542ac79086908690869086906040516020015260405160e060020a63ffffffff8716028152600481019490945260248401929092521515604483015215156064820152608401602060405180830381600087803b15156100f057600080fd5b6102c65a03f1151561010157600080fd5b505050604051805150505b505050505600a165627a7a72305820a667f44c7bdc786c38166439733554734662e5e5e8653b5ab3173c81ee3de10d0029",
+  "networks": {
+    "1516334676495": {
+      "events": {},
+      "links": {},
+      "address": "0xedb333dea320fe08669c856239260b8e267be995",
+      "updated_at": 1516344954503
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1516587965070
+}
