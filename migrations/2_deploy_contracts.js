@@ -9,7 +9,7 @@ module.exports = function(deployer) {
   })
   .then(() => {
     return deployer.deploy(TestController, TestStorage.address, TestStorageTwo.address);
-  });
+  })
   .then(() => {
     return deployer.deploy(TestInteractive, TestController.address);
   });

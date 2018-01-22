@@ -6,7 +6,7 @@
     "test": "test"
   },
   "dependencies": {
-    "awaiting": "^3.0.0",
+    "awaiting": "^3.0.0"
   },
   "devDependencies": {},
   "scripts": {
