@@ -1,0 +1,25 @@
+{
+  "name": "solidity-demonstrations",
+  "version": "0.0.1",
+  "description": "Contracts and tests to demonstrate concepts in contract programming using solidity",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "awaiting": "^3.0.0",
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DigixGlobal/solidity-demonstrations.git"
+  },
+  "keywords": [
+    "solidity"
+  ],
+  "author": "Nguyen Hoang Vu <vu@digixglobal.com>",
+  "license": "BSD-2-Clause",
+  "homepage": "https://github.com/DigixGlobal/solidity-demonstrations#readme"
+}
