@@ -24,4 +24,31 @@ contract TestInteractive {
     TestController(testController).change_storage(0, _number_1_contract_1, _to_throw_1, _to_return_false_1);
     TestController(testController).change_storage_two(0, _number_1_contract_2, _to_throw_2, _to_return_false_2);
   }
+
+  function test_multiples(uint256[] _numbers)
+           returns (uint256 _sum)
+  {
+    for (uint256 i = 0; i < _numbers.length; i++) {
+      _sum += _numbers[i];
+    }
+  }
+
+  function test_multiple_arrays(uint256[] _numbers, bytes32[] _strings)
+           returns (uint256 _sum, bytes32 _last_string)
+  {
+    for (uint256 i = 0; i < _numbers.length; i++) {
+      _sum += _numbers[i];
+    }
+    _last_string = _strings[_strings.length - 1];
+  }
+
+  function return_numbers()
+           returns (uint256[] _array)
+  {
+    uint256[] memory _array_temp = new uint256[](3);
+    _array_temp[0] = 1;
+    _array_temp[1] = 2;
+    _array_temp[2] = 3;
+    _array = _array_temp;
+  }
 }
