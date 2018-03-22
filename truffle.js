@@ -1,5 +1,21 @@
+const LightWalletProvider = require('@digix/truffle-lightwallet-provider');
+
+const { KEYSTORE, PASSWORD } = process.env;
+
 module.exports = {
   networks: {
+    kovan: {
+      provider: new LightWalletProvider({
+        keystore: KEYSTORE,
+        password: PASSWORD,
+        rpcUrl: 'https://kovan.infura.io/',
+        pollingInterval: 2000,
+        // debug: true,
+      }),
+      gas: 4700000,
+      gasPrice: 20 * 10 ** 9,
+      network_id: '42',
+    },
     development: {
       host: "localhost",
       port: 6545,

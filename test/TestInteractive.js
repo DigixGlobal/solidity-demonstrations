@@ -84,5 +84,15 @@ contract('TestInteractive', function(accounts) {
     assert.deepEqual(numbersInContract2[0], bN(0));
   });
 
+  it("[interactive function makes 2 calls to change two storage contracts, second call throws] revert all data", async function() {
+    console.log("1,", await )
+    const number1Contract2 = bN(987654);
+    assert.ok(await a.failure(testInteractive.change_two_contracts(number1Contract1, number1Contract2, false, true, false, false)));
+    const numbersInContract1 = await testStorage.read_numbers.call();
+    const numbersInContract2 = await testStorageTwo.read_numbers.call();
+    assert.deepEqual(numbersInContract1[0], bN(0));
+    assert.deepEqual(numbersInContract2[0], bN(0));
+  });
+
 
 });

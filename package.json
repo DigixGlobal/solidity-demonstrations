@@ -6,7 +6,8 @@
     "test": "test"
   },
   "dependencies": {
-    "awaiting": "^3.0.0"
+    "awaiting": "^3.0.0",
+    "@digix/truffle-lightwallet-provider": "^0.1.4"
   },
   "devDependencies": {},
   "scripts": {

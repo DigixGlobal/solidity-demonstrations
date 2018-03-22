@@ -25,4 +25,11 @@ contract TestStorage {
   {
     _numbers = numbers;
   }
+
+  function read_numbers(uint256 _no)
+           returns (uint256[] _numbers)
+  {
+    _numbers = new uint256[](1);
+    _numbers[0] = _no;
+  }
 }
